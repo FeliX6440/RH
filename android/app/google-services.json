@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "163732845889",
+    "project_id": "r-h-test-fdzt8k",
+    "storage_bucket": "r-h-test-fdzt8k.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:163732845889:android:edd1b721e71cc17c6a9dc0",
+        "android_client_info": {
+          "package_name": "com.mycompany.rhtest"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDQgeazN4KNz1pVB4ce8usGjVtz2BJ4vbs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
