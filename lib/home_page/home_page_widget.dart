@@ -572,11 +572,20 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                           scaffoldKey.currentState!.openDrawer();
                         },
                       ),
-                      const Text(
-                        'Rainconnect.',
-                        style: TextStyle(
-                          fontWeight: FontWeight.normal,
-                          fontSize: 33.0,
+                      InkWell(
+                        splashColor: Colors.transparent,
+                        focusColor: Colors.transparent,
+                        hoverColor: Colors.transparent,
+                        highlightColor: Colors.transparent,
+                        onTap: () async {
+                          context.pushNamed('RecordTestPage');
+                        },
+                        child: const Text(
+                          'Rainconnect.',
+                          style: TextStyle(
+                            fontWeight: FontWeight.normal,
+                            fontSize: 33.0,
+                          ),
                         ),
                       ),
                       Text(
@@ -637,9 +646,17 @@ class _HomePageWidgetState extends State<HomePageWidget> {
                     ),
                   ),
                 ),
-                const Column(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [],
+                Container(
+                  height: MediaQuery.sizeOf(context).height * 0.6,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(8.0),
+                  ),
+                  child: const SingleChildScrollView(
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [],
+                    ),
+                  ),
                 ),
                 Padding(
                   padding: const EdgeInsets.all(10.0),

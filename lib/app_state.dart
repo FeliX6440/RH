@@ -27,6 +27,42 @@ class FFAppState extends ChangeNotifier {
   set audioTextResult(String value) {
     _audioTextResult = value;
   }
+
+  List<String> _languageList = [
+    'English',
+    'French',
+    'Chinese',
+    'Russian',
+    'German',
+    'Italian'
+  ];
+  List<String> get languageList => _languageList;
+  set languageList(List<String> value) {
+    _languageList = value;
+  }
+
+  void addToLanguageList(String value) {
+    _languageList.add(value);
+  }
+
+  void removeFromLanguageList(String value) {
+    _languageList.remove(value);
+  }
+
+  void removeAtIndexFromLanguageList(int index) {
+    _languageList.removeAt(index);
+  }
+
+  void updateLanguageListAtIndex(
+    int index,
+    String Function(String) updateFn,
+  ) {
+    _languageList[index] = updateFn(_languageList[index]);
+  }
+
+  void insertAtIndexInLanguageList(int index, String value) {
+    _languageList.insert(index, value);
+  }
 }
 
 LatLng? _latLngFromString(String? val) {

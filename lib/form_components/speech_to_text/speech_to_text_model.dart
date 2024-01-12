@@ -1,27 +1,15 @@
 import '/flutter_flow/flutter_flow_util.dart';
-import '/flutter_flow/form_field_controller.dart';
 import 'speech_to_text_widget.dart' show SpeechToTextWidget;
 import 'package:flutter/material.dart';
-import 'package:record/record.dart';
 
 class SpeechToTextModel extends FlutterFlowModel<SpeechToTextWidget> {
   ///  Local state fields for this component.
 
-  bool isRecording = false;
+  String selectLang = '';
 
-  String sttaudio = 'false';
+  String summaryText = '';
 
-  ///  State fields for stateful widgets in this component.
-
-  Record? audioRecorder;
-  String? audioRecorded;
-  // State field(s) for TextField widget.
-  FocusNode? textFieldFocusNode;
-  TextEditingController? textController;
-  String? Function(BuildContext, String?)? textControllerValidator;
-  // State field(s) for DropDown widget.
-  String? dropDownValue;
-  FormFieldController<String>? dropDownValueController;
+  String translatedText = '';
 
   /// Initialization and disposal methods.
 
@@ -29,10 +17,7 @@ class SpeechToTextModel extends FlutterFlowModel<SpeechToTextWidget> {
   void initState(BuildContext context) {}
 
   @override
-  void dispose() {
-    textFieldFocusNode?.dispose();
-    textController?.dispose();
-  }
+  void dispose() {}
 
   /// Action blocks are added here.
 

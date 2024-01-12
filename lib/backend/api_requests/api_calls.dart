@@ -66,10 +66,12 @@ class TranslateEndpointCall {
 }
 
 class SummarizeEndpointCall {
-  static Future<ApiCallResponse> call() async {
-    const ffApiRequestBody = '''
+  static Future<ApiCallResponse> call({
+    String? text = '',
+  }) async {
+    final ffApiRequestBody = '''
 {
-  "text": "HERE THE TEXT THAT NEEDS TO BE SUMMARIZED"
+  "text": "$text"
 }''';
     return ApiManager.instance.makeApiCall(
       callName: 'summarize endpoint',
@@ -86,6 +88,11 @@ class SummarizeEndpointCall {
       alwaysAllowBody: false,
     );
   }
+
+  static String? result(dynamic response) => castToType<String>(getJsonField(
+        response,
+        r'''$.text''',
+      ));
 }
 
 class BusinessCardReaderEndpointCall {

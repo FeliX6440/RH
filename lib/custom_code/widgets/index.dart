@@ -1,1 +1,1 @@
-export 'custom_record_widget.dart' show CustomRecordWidget;
+export 'custom_speech_to_text.dart' show CustomSpeechToText;

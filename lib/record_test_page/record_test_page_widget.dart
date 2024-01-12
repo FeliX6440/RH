@@ -54,10 +54,13 @@ class _RecordTestPageWidgetState extends State<RecordTestPageWidget> {
         backgroundColor: FlutterFlowTheme.of(context).primaryBackground,
         body: SafeArea(
           top: true,
-          child: wrapWithModel(
-            model: _model.speechToTextModel,
-            updateCallback: () => setState(() {}),
-            child: const SpeechToTextWidget(),
+          child: Padding(
+            padding: const EdgeInsetsDirectional.fromSTEB(15.0, 15.0, 15.0, 0.0),
+            child: wrapWithModel(
+              model: _model.speechToTextModel,
+              updateCallback: () => setState(() {}),
+              child: const SpeechToTextWidget(),
+            ),
           ),
         ),
       ),
